@@ -1,0 +1,132 @@
+// Player heading
+.player-heading {
+	position: relative;
+	padding-left: 70px;
+	padding-right: 15px;
+	.player-image {
+		width: 45px;
+		height: 45px;
+		border-radius: 50%;
+		position: absolute;
+		left: 15px;
+		display: inline-block;
+		vertical-align: middle;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.player-name {
+		font-size: 22px;
+		margin-bottom: 3px;
+		color: $white;
+	}
+	.player-stats-short {
+		font-family: $font-secondary;
+		font-size: 11px;
+		text-transform: uppercase;
+		color: $white;
+	}
+	.badge {
+		position: absolute;
+		left: 15px;
+		top: 0;
+		font-size: 26px;
+		font-weight: normal;
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		line-height: 32px;
+		background-color: rgba(grey(medium), 0.4);
+	}
+}
+
+.player-stats {
+	display: flex;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-bottom: 1em;
+	border-bottom: 1px solid grey(light);
+	& > li {
+		flex: 1;
+		text-align: center;
+		border-right: 1px solid grey(light);
+		&:last-child {
+			border-right: none;
+		}
+	}
+	.player-stats-number {
+		font-size: 24px;
+		font-weight: 700;
+		color: grey(dark);
+	}
+}
+
+.player-position {
+	display: flex;
+	margin-top: 1em;
+	#chart-gauge-champion,
+	#chart-gauge-next {
+		width: 40% !important;
+		height: 40% !important;
+	}
+	&-difference {
+		padding-left: 15px;
+		padding-top: 4px;
+		li {
+			// font-family: $font-secondary;
+			color: grey(medium);
+			span {
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+// Charts
+// .ct-gauge {
+// 	max-width: 100px;
+// 	.ct-label {
+// 		font-size: 20px;
+// 		// transform: translateX(-15px);
+// 		dominant-baseline: central;
+// 		text-anchor: middle;
+// 		&::after {
+// 			content: '/';
+// 		}
+// 		&+.ct-label {
+// 			// transform: translateX(15px);
+// 			display: none;
+// 		}
+// 	}
+// 	.ct-series-b {
+// 		.ct-slice-donut {
+// 			stroke: grey(light);
+// 		}
+// 	}
+// 	& > svg {
+// 		transform-origin: (0, 100%);
+// 		transform: translate(0, 50%);
+// 	}
+// }
+
+// .ct-chart {
+// 	// padding-right: 1em;
+// 	.ct-labels {
+// 		foreignObject {
+// 			width: 20px;
+// 			.ct-label {
+// 				width: 20px !important;
+// 			}
+// 		}
+// 	}
+// 	.ct-series {
+// 		.ct-bar {
+// 			stroke-width: 8px;
+// 		}
+// 	}
+// 	 > svg {
+// 			transform-origin: (0, 100%);
+// 			transform: translate(-5%, 0);
+// 		}
+// }
+

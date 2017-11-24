@@ -1,0 +1,29 @@
+// Login
+.form-select {
+	position: relative;
+	&::after {
+		content: "\f107";
+		font-family: $fa;
+		color: grey(medium);
+		font-weight: normal;
+		font-size: 1.6em;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		transform: translateY(-50%);
+		pointer-events: none;
+		line-height: 1em;
+		@include breakpoint(lg) {
+			right: 10px;
+		}
+	}
+	select {
+		appearance: none;
+		background-color: $white;
+		// border-color: transparent;
+		color: grey(medium);
+		padding: 0.4em 1em 0.5em 0.7em;
+		width: 100%;
+		font-weight: 700;
+	}
+}

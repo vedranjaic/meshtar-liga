@@ -1,0 +1,48 @@
+@@include('modules/_header.html')
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	@@include('modules/_nav.html', {
+		"page-title": "Meshtar liga",
+		"display-join": "",
+		"new-game": ""
+	})
+
+	<section class="leaderboard">
+
+		<div>
+
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li role="presentation" class="active"><a href="#season-view" aria-controls="season-view" role="tab" data-toggle="tab">Season 01</a></li>
+				<li role="presentation"><a href="#all-time-view" aria-controls="all-time-view" role="tab" data-toggle="tab">All time</a></li>
+			</ul>
+
+			<!-- Tab panes -->
+			<div class="tab-content">
+				<div role="tabpanel" class="tab-pane active" id="season-view">
+					<ul class="players list-group">
+						@@include('modules/_leaderboard.html')
+					</ul>
+				</div>
+				<div role="tabpanel" class="tab-pane" id="all-time-view">
+					<ul class="players list-group">
+						@@include('modules/_leaderboard.html')
+					</ul>
+				</div>
+			</div>
+
+		</div>
+		
+	</section>
+	<!-- /.leaderboard -->
+
+@@include('modules/_footer.html', {
+	"page-leaderboard": "active",
+	"page-history": "",
+	"page-new-game": "",
+	"page-payout": "",
+	"page-rules": ""
+})

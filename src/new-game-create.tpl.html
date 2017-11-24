@@ -1,0 +1,78 @@
+@@include('modules/_header.html')
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+	@@include('modules/_nav.html', {
+		"page-title": "Create new game",
+		"display-join": "hidden",
+		"new-game": ""
+	})
+
+	<div class="container-fluid">
+		
+		<section class="new-game-create text-center">
+			<form action="new-game.html">
+				<label for="number-of-players" class="lead">Number of players:</label>
+				<div class="input-group">
+					<input id="number-of-players" type="number" pattern="[0-9]*" class="form-control" value="10">
+					<div class="input-group-btn">
+						<button class="btn btn-default"><i class="icon fa fa-plus"></i></button>
+						<button class="btn btn-default"><i class="icon fa fa-minus"></i></button>
+					</div>
+				</div>
+				<button class="btn btn-success btn-block btn-new-game" type="submit">Create session</button>
+				<div class="progress">
+					<div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width: 30%;"></div>
+					<span>Waiting for players... (3/10)</span>
+				</div>
+			</form>
+		</section>
+		<!-- /.new-game-create -->
+
+	</div>
+	<!-- /.container-fluid -->
+
+	<ul class="list-group game-players-join">
+		<li>
+			<ul class="list-unstyled loader-before-progress">
+				<li class="text-center"><i class="icon fa fa-spinner fa-pulse"></i></li>
+				<li class="section-title text-center">Players joined:</li>
+			</ul>
+		</li>
+		<li class="list-group-item">
+			<span class="player-name"><i class="icon fa fa-check-circle"></i> Ante Krizman</span>
+			<span class="player-joined">Joined!</span>
+		</li>
+		<li class="list-group-item">
+			<span class="player-name"><i class="icon fa fa-check-circle"></i> Borna Nemanić</span>
+			<span class="player-joined">Joined!</span>
+		</li>
+		<li class="list-group-item">
+			<span class="player-name"><i class="icon fa fa-check-circle"></i> Matija Škiljan</span>
+			<span class="player-joined">Joined!</span>
+		</li>
+		<li class="list-group-item player-waiting">
+			<span class="player-name"><i class="icon fa fa-spinner fa-pulse"></i> Ivan Dokuzović</span>
+			<span class="player-joined">Waiting...</span>
+		</li>
+		<li class="list-group-item player-waiting">
+			<span class="player-name"><i class="icon fa fa-spinner fa-pulse"></i> Vedran Jaić</span>
+			<span class="player-joined">Waiting...</span>
+		</li>
+		<li class="list-group-item player-waiting">
+			<span class="player-name"><i class="icon fa fa-spinner fa-pulse"></i> Alen Malogorski</span>
+			<span class="player-joined">Waiting...</span>
+		</li>
+	</ul>
+
+
+
+@@include('modules/_footer.html', {
+	"page-leaderboard": "",
+	"page-history": "",
+	"page-new-game": "active",
+	"page-payout": "",
+	"page-rules": ""
+})

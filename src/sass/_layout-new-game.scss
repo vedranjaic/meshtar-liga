@@ -1,0 +1,34 @@
+// New game
+.game-points-current {
+	color: #72afd3;
+	// color: functional(blue);
+	font-size: 5em;
+	margin-top: 20px;
+}
+.game-points-text {
+	font-weight: bold;
+	color: grey(medium);
+}
+.btn-vani {
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-top: 2em;
+	font-size: 18px;
+}
+
+// Exit
+.game-players-exit {
+	margin-top: 3em;
+	.text-center {
+		margin-bottom: 1em;
+		color: grey(medium);
+	}
+	.player-name {
+		.icon {
+			color: functional(green);
+		}
+	}
+	.player-points {
+		background-color: functional(green);
+	}
+}

@@ -1,0 +1,123 @@
+// Index
+// Leaderboard
+.leaderboard,
+.game-players-exit,
+.player-profile,
+.rules {
+	padding-bottom: 60px;
+}
+
+// Tabs
+.nav-tabs {
+	display: flex;
+	& > li {
+		flex: 1;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 700;
+		background-color: grey(light);
+		&.active {
+			background-color: $white;
+			& > {
+				border: 0;
+			}
+		}
+		& > a {
+			margin-right: 0;
+			border: 0;
+			border-radius: 0;
+		}
+	}
+}
+
+// Player
+.players {
+	li {
+		padding: 10px 15px 10px 10px;
+		&:first-child {
+			border-top: 0;
+		}
+		&:last-child {
+			border-bottom: 0;
+		}
+	}
+}
+.player {
+	display: block;
+	position: relative;
+	&:hover,
+	&:focus,
+	&:active,
+	&:active:focus {
+		text-decoration: none;
+		color: functional(purple);
+	}
+	&.myself {
+		.player-board-position {
+			color: $white;
+			background-color: functional(purple);
+			border-radius: 50%;
+		}
+	}
+	&.top {
+		position: relative;
+		&::before {
+			content: '\f091';
+			font-family: $fa;
+			position: absolute;
+			left: 14px;
+			top: -4px;
+			z-index: 10;
+			background-color: white;
+			padding: 0 3px;
+			border-radius: 10px;
+		}
+	}
+	&.champion {
+		&::before {
+			color: functional(yellow);
+		}
+	}
+	&.silver {
+		&::before {
+			color: silver;
+		}
+	}
+	&.bronze {
+		&::before {
+			color: $bronze;
+		}
+	}
+
+	.player-board-position {
+		width: 18px;
+		height: 18px;
+		text-align: center;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	.player-image {
+		width: 35px;
+		height: 35px;
+		border-radius: 50%;
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+		margin-right: 5px;
+	}
+	.player-name {
+		font-size: 1.1em;
+	}
+	.player-points {
+		position: absolute;
+		right: 0;
+		line-height: 35px;
+		font-weight: 700;
+		&.negative {
+			color: functional(red);
+		}
+	}
+}

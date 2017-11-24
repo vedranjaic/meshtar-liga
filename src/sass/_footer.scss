@@ -1,0 +1,80 @@
+// Footer
+.footer-nav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	// background-color: grey(light);
+	background-color: $white;
+	border-top: 2px solid grey(light);
+	z-index: 100;
+	padding-top: 8px;
+	ul {
+		display: flex;
+		margin-bottom: 5px;
+		// position: relative;
+		li {
+			flex: 1;
+			text-align: center;
+			&.active {
+				a {
+					color: functional(blue);
+					svg {
+						g {
+							path {
+								fill: functional(blue) !important;
+							}
+						}
+					}
+				}
+			}
+			a {
+				@include transition;
+				font-size: 1.3em;
+				line-height: 1;
+				&:hover,
+				&:focus,
+				&:active,
+				&:active:focus {
+					text-decoration: none;
+					color: darken(functional(blue), 5%);
+				}
+				span {
+					font-size: 11px;
+					font-family: $font-secondary;
+				}
+			}
+			&.new-game {
+				a {
+					background-color: $white;
+					box-shadow: inset 0 2px grey(light), inset 0 2px grey(light);
+					border-radius: 40%;
+					position: absolute;
+					top: -15px;
+					left: 50%;
+					transform: translateX(-50%);
+					padding-top: 10px;
+					width: 80px;
+					// z-index: 10;
+					&:hover,
+					&:active {
+						svg {
+							transform: scale(1.1);
+							// transform: translateZ(0);
+						}
+					}
+					svg {
+						@include transition;
+						width: 70%;
+						g {
+							path {
+								fill: grey(medium);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+}

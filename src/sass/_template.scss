@@ -1,0 +1,91 @@
+// Template
+body {
+	font-family: $font;
+}
+a {
+	color: grey(medium);
+}
+
+// Buttons
+.btn {
+	&-success {
+		background-color: functional(blue);
+		border-color: functional(blue);
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus {
+			background-color: darken(functional(blue), 5%);
+			border-color: darken(functional(blue), 5%);
+		}
+	}
+	&-primary {
+		background-color: #72afd3;
+		border-color: #72afd3;
+		&:hover,
+		&:focus,
+		&:active,
+		&:active:focus {
+			background-color: darken(#72afd3, 5%);
+			border-color: darken(#72afd3, 5%);
+		}
+	}
+}
+
+// Modals
+.modal-join-game {
+	.modal-body {
+		svg {
+			width: 30%;
+			margin-top: 1em;
+			margin-bottom: 1em;
+		}
+	}
+}
+
+
+// Titles
+.section-title {
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	.jumbotron & {
+		padding-left: 15px;
+	}
+}
+
+// Jumbotron
+.jumbotron {
+	padding-top: 20px;
+	padding-bottom: 0;
+	margin-bottom: 0;
+	background-image: linear-gradient(165deg, functional(blue) 0%, functional(purple) 100%);
+}
+
+// Progress
+.progress {
+	height: 33px;
+	background-color: grey(light);
+	position: relative;
+	margin-bottom: 0;
+
+	.progress-bar-primary {
+		background-color: functional(purple);
+	}
+	.progress-bar-success {
+		background-color: functional(blue);
+	}
+	span {
+		position: absolute;
+		left: 50%;
+		padding: 6px;
+		color: $white;
+		transform: translateX(-50%);
+		width: 100%;
+	}
+}
+
+
+
+
+

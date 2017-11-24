@@ -1,0 +1,96 @@
+@@include('modules/_header.html')
+
+	<!--[if lt IE 8]>
+		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+	<![endif]-->
+
+<!-- 	@@include('modules/_nav.html', {
+		"page-title": "Player profile",
+		"display-join": "",
+		"new-game": ""
+	}) -->
+
+	<div class="jumbotron">
+
+		<div class="player-heading">
+			<!-- <span class="badge">4</span> -->
+			<span class="player-image" style="background-image:url('assets/images/players/tomislav-majstorovic.jpg');"></span>
+			<h4 class="player-name">Tomislav Majstorović</h4>
+			<span class="player-stats-short"><strong>29</strong> games | <strong>16</strong> wins</span>
+		</div>
+		<!-- /.player-heading -->
+
+		<canvas id="bar-chart"></canvas>
+
+	</div>
+	<!-- /.jumbotron -->
+
+	<ul class="player-stats list-inline">
+		<li>
+			<ul class="list-unstyled">
+				<li class="player-stats-number">4<sup>th</sup></li>
+				<li>Position</li>
+			</ul>
+		</li>
+		<li>
+			<ul class="list-unstyled">
+				<li class="player-stats-number">29</li>
+				<li>Games</li>
+			</ul>
+		</li>
+		<li>
+			<ul class="list-unstyled">
+				<li class="player-stats-number">16</li>
+				<li>Wins</li>
+			</ul>
+		</li>
+		<li>
+			<ul class="list-unstyled">
+				<li class="player-stats-number">3</li>
+				<li>Loses</li>
+			</ul>
+		</li>
+	</ul>
+	<!-- /.player-stats -->
+
+	<div class="container-fluid">
+
+		<section class="player-profile">
+
+			<h5 class="section-title text-center">Position to Champion</h5>
+			<div class="player-position">
+				<canvas id="chart-gauge-champion"></canvas>
+				<ul class="player-position-difference list-unstyled">
+					<li><span>Champion lead:</span> 100 pts</li>
+					<li><span>Difference:</span> 60 pts</li>
+					<li><span>AVG Games To Win:</span> 33</li>
+				</ul>
+			</div>
+			<!-- /.player-position -->
+
+			<h5 class="section-title text-center">Position to Next</h5>
+			<div class="player-position">
+				<canvas id="chart-gauge-next"></canvas>
+				<ul class="player-position-difference list-unstyled">
+					<li><span>Next player:</span> 43 pts</li>
+					<li><span>Difference:</span> 3 pts</li>
+					<li><span>AVG Games To Pass:</span> 1</li>
+				</ul>
+			</div>
+			<!-- /.player-position -->
+
+		</section>
+		<!-- /.player-profile -->
+		
+	</div>
+	<!-- /.container-fluid -->
+
+
+
+@@include('modules/_footer.html', {
+	"page-leaderboard": "active",
+	"page-history": "",
+	"page-new-game": "",
+	"page-payout": "",
+	"page-rules": ""
+})
