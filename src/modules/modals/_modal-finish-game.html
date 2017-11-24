@@ -1,0 +1,27 @@
+<div class="modal modal-finish-game" id="modalFinishGame" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content text-center">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title" id="myModalLabel">Game finished!</h4>
+			</div>
+			<div class="modal-body">
+				@@include('../../images/icons/new-game.svg')
+				<p class="lead">You lost, enter the number of<br/>cards you have left:</p>
+				<form action="new-game-create.html">
+					<!-- <label for="number-of-players" class="lead">Number of players:</label> -->
+					<div class="input-group">
+						<div class="input-group-btn">
+							<button class="btn btn-default"><i class="icon fa fa-plus"></i></button>
+						</div>
+						<input id="number-of-cards" type="number" pattern="[0-9]*" min="1" max="40" class="form-control" value="1">
+						<div class="input-group-btn">
+							<button class="btn btn-default"><i class="icon fa fa-minus"></i></button>
+						</div>
+					</div>
+					<button class="btn btn-success btn-block btn-finish-game" type="submit">Submit & End game</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

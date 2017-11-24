@@ -16,9 +16,11 @@
 			<form action="new-game.html">
 				<label for="number-of-players" class="lead">Number of players:</label>
 				<div class="input-group">
-					<input id="number-of-players" type="number" pattern="[0-9]*" class="form-control" value="10">
 					<div class="input-group-btn">
 						<button class="btn btn-default"><i class="icon fa fa-plus"></i></button>
+					</div>
+					<input id="number-of-players" type="number" pattern="[0-9]*" min="2" max="20" class="form-control" value="10">
+					<div class="input-group-btn">
 						<button class="btn btn-default"><i class="icon fa fa-minus"></i></button>
 					</div>
 				</div>
